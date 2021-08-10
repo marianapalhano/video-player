@@ -12,6 +12,7 @@ export default class SearchBar extends React.Component {
         e.preventDefault();
         // Tell App that the user submited a search
         // Call callback from parent component
+        this.props.onSearchSubmit(this.state.term);
     }
 
     render() {
