@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import React from 'react';
 
 export default class SearchBar extends React.Component {
@@ -10,8 +9,6 @@ export default class SearchBar extends React.Component {
 
     onFormSubmit = e => {
         e.preventDefault();
-        // Tell App that the user submited a search
-        // Call callback from parent component
         this.props.onSearchSubmit(this.state.term);
     }
 
@@ -20,7 +17,7 @@ export default class SearchBar extends React.Component {
             <div className="search-bar ui segment">
                 <form className="ui form" onSubmit={this.onFormSubmit}>
                     <div className="field">
-                        <label for="term">Video Search</label>
+                        <label htmlFor="term">Video Search</label>
                         <input
                             type="text"
                             name="term"
